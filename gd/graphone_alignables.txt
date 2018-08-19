@@ -149,6 +149,9 @@ alignable { input: "mh" output: "vj" }
 alignable { input: "n" output: "n̴̪" }
 alignable { input: "n" output: "n" }
 alignable { input: "n" output: "ɲ" }
+alignable { input: "n-" output: "n̴̪" }
+alignable { input: "n-" output: "n" }
+alignable { input: "n-" output: "ɲ" }
 alignable { input: "ng" output: "ŋ ɡ" }
 alignable { input: "ng" output: "ŋʲ ɡʲ" }
 alignable { input: "nn" output: "n̴̪" }
@@ -308,6 +311,7 @@ alignable { input: "adh" output: "ɤː" }
 alignable { input: "agh" output: "ɤː" }
 alignable { input: "aidh" output: "ai" }
 alignable { input: "aigh" output: "ɤi" }
+alignable { input: "aigh" output: "ɤ j" }
 alignable { input: "eagh" output: "ɔː" }
 alignable { input: "eamh" output: "ɛu" }
 alignable { input: "iodh" output: "iə" }
@@ -327,3 +331,4 @@ alignable { input: "arbh" output: "a ɾ a v" }
 alignable { input: "iomr" output: "i m i ɾ" }
 alignable { input: "alb" output: "a ɫ̪ a p" }
 alignable { input: "arm" output: "a ɾ a m" }
+alignable { input: "ilg" output: "i l i kʲ" }
