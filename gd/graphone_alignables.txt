@@ -1,0 +1,325 @@
+# -*- protobuffer -*- festus.AlignablesSpec
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Grapheme-phoneme correspondence for Scots Gaelic, based on Wikipedia
+# https://en.wikipedia.org/wiki/Scottish_Gaelic_orthography
+
+input_label_type: BYTE
+output_label_type: SYMBOL
+
+output_symbol { key: "." value: 1 }
+output_symbol { key: "a" value: 2 }
+output_symbol { key: "ai" value: 3 }
+output_symbol { key: "au" value: 4 }
+output_symbol { key: "aː" value: 5 }
+output_symbol { key: "e" value: 6 }
+output_symbol { key: "ei" value: 7 }
+output_symbol { key: "eː" value: 8 }
+output_symbol { key: "f" value: 9 }
+output_symbol { key: "fj" value: 10 }
+output_symbol { key: "h" value: 11 }
+output_symbol { key: "hj" value: 12 }
+output_symbol { key: "i" value: 13 }
+output_symbol { key: "ia" value: 14 }
+output_symbol { key: "iə" value: 15 }
+output_symbol { key: "iː" value: 16 }
+output_symbol { key: "j" value: 17 }
+output_symbol { key: "ju" value: 18 }
+output_symbol { key: "k" value: 19 }
+output_symbol { key: "kʰ" value: 20 }
+output_symbol { key: "kʲ" value: 21 }
+output_symbol { key: "kʰʲ" value: 22 }
+output_symbol { key: "l" value: 23 }
+output_symbol { key: "m" value: 24 }
+output_symbol { key: "mj" value: 25 }
+output_symbol { key: "n" value: 26 }
+output_symbol { key: "n̴̪" value: 27 }
+output_symbol { key: "o" value: 28 }
+output_symbol { key: "oː" value: 29 }
+output_symbol { key: "p" value: 30 }
+output_symbol { key: "pj" value: 31 }
+output_symbol { key: "pʰ" value: 32 }
+output_symbol { key: "r" value: 33 }
+output_symbol { key: "r̴" value: 34 }
+output_symbol { key: "s̪" value: 35 }
+output_symbol { key: "t" value: 36 }
+output_symbol { key: "tʲ" value: 37 }
+output_symbol { key: "t̪" value: 38 }
+output_symbol { key: "tʰʲ" value: 39 }
+output_symbol { key: "t̪ʰ" value: 40 }
+output_symbol { key: "u" value: 41 }
+output_symbol { key: "ua" value: 42 }
+output_symbol { key: "ui" value: 43 }
+output_symbol { key: "uə" value: 44 }
+output_symbol { key: "uː" value: 45 }
+output_symbol { key: "v" value: 46 }
+output_symbol { key: "vj" value: 47 }
+output_symbol { key: "x" value: 48 }
+output_symbol { key: "ç" value: 49 }
+output_symbol { key: "ŋ" value: 50 }
+output_symbol { key: "ɔ" value: 51 }
+output_symbol { key: "ə" value: 52 }
+output_symbol { key: "ɛ" value: 53 }
+output_symbol { key: "ɡ" value: 54 }
+output_symbol { key: "ɣ" value: 55 }
+output_symbol { key: "ɤ" value: 56 }
+output_symbol { key: "ɪ" value: 57 }
+output_symbol { key: "ɯ" value: 58 }
+output_symbol { key: "ɲ" value: 59 }
+output_symbol { key: "ɾ" value: 60 }
+output_symbol { key: "ʃ" value: 61 }
+output_symbol { key: "ʎ" value: 62 }
+output_symbol { key: "ʝ" value: 63 }
+output_symbol { key: "ᵲ" value: 64 }
+output_symbol { key: "ɔi" value: 65 }
+output_symbol { key: "əi" value: 66 }
+output_symbol { key: "ɤi" value: 67 }
+output_symbol { key: "ɯi" value: 68 }
+output_symbol { key: "ʰk" value: 69 }
+output_symbol { key: "ʰkʲ" value: 70 }
+output_symbol { key: "ʰp" value: 71 }
+output_symbol { key: "ʰtʲ" value: 72 }
+output_symbol { key: "ʰt̪" value: 73 }
+output_symbol { key: "ɔu" value: 74 }
+output_symbol { key: "ɛu" value: 75 }
+output_symbol { key: "ŋʲ" value: 76 }
+output_symbol { key: "ɔː" value: 77 }
+output_symbol { key: "ɛː" value: 78 }
+output_symbol { key: "ɡʲ" value: 79 }
+output_symbol { key: "ɤː" value: 80 }
+output_symbol { key: "ɫ̪" value: 81 }
+output_symbol { key: "ɯː" value: 82 }
+output_symbol { key: "ɾʲ" value: 83 }
+
+alignable { input: "b" output: "p" }
+alignable { input: "b" output: "pj" }
+alignable { input: "bh" output: "." }
+alignable { input: "bh" output: "" }
+alignable { input: "bh" output: "v" }
+alignable { input: "bh" output: "vj" }
+alignable { input: "c" output: "kʰ" }
+alignable { input: "c" output: "ʰk" }
+alignable { input: "c" output: "k" }
+alignable { input: "c" output: "kʰʲ" }
+alignable { input: "c" output: "ʰkʲ" }
+alignable { input: "c" output: "kʲ" }
+alignable { input: "ch" output: "x" }
+alignable { input: "ch" output: "ç" }
+alignable { input: "chd" output: "x k" }
+alignable { input: "cn" output: "k r" }
+alignable { input: "d" output: "t̪" }
+alignable { input: "d" output: "tʲ" }
+alignable { input: "aidh" output: "ɪ" }
+alignable { input: "éidh" output: "eː" }
+alignable { input: "dh" output: "." }
+alignable { input: "dh" output: "ɣ" }
+alignable { input: "dh" output: "ʝ" }
+alignable { input: "f" output: "f" }
+alignable { input: "f" output: "fj" }
+alignable { input: "fh" output: "" }
+alignable { input: "g" output: "k" }
+alignable { input: "g" output: "kʲ" }
+alignable { input: "gh" output: "" }
+alignable { input: "gh" output: "." }
+alignable { input: "gh" output: "ɣ" }
+alignable { input: "gh" output: "ʝ" }
+alignable { input: "gn" output: "k r" }
+alignable { input: "h" output: "h" }
+alignable { input: "h-" output: "h" }
+alignable { input: "l" output: "ɫ̪" }
+alignable { input: "l" output: "ʎ" }
+alignable { input: "l" output: "l" }
+alignable { input: "ll" output: "ɫ̪" }
+alignable { input: "ll" output: "ʎ" }
+alignable { input: "m" output: "m" }
+alignable { input: "m" output: "mj" }
+alignable { input: "mh" output: "." }
+alignable { input: "mh" output: "v" }
+alignable { input: "mh" output: "vj" }
+alignable { input: "n" output: "n̴̪" }
+alignable { input: "n" output: "n" }
+alignable { input: "n" output: "ɲ" }
+alignable { input: "ng" output: "ŋ ɡ" }
+alignable { input: "ng" output: "ŋʲ ɡʲ" }
+alignable { input: "nn" output: "n̴̪" }
+alignable { input: "nn" output: "ɲ" }
+alignable { input: "p" output: "pʰ" }
+alignable { input: "p" output: "ʰp" }
+alignable { input: "p" output: "p" }
+alignable { input: "p" output: "pj" }
+alignable { input: "ph" output: "f" }
+alignable { input: "ph" output: "fj" }
+alignable { input: "r" output: "ᵲ" }
+alignable { input: "r" output: "ɾ" }
+alignable { input: "r" output: "ɾʲ" }
+alignable { input: "rr" output: "ᵲ" }
+alignable { input: "rt" output: "ɾ ʃ t̪" }
+alignable { input: "rd" output: "ɾ ʃ t̪" }
+alignable { input: "s" output: "s̪" }
+alignable { input: "s" output: "ʃ" }
+alignable { input: "sh" output: "h" }
+alignable { input: "sh" output: "hj" }
+alignable { input: "sr" output: "s̪ t̪ ɾ" }
+alignable { input: "str" output: "s̪ t̪ ɾ" }
+alignable { input: "t" output: "t̪ʰ" }
+alignable { input: "t" output: "ʰt̪" }
+alignable { input: "t" output: "t" }
+alignable { input: "t" output: "tʰʲ" }
+alignable { input: "t" output: "ʰtʲ" }
+alignable { input: "t" output: "tʲ" }
+alignable { input: "th" output: "" }
+alignable { input: "th" output: "." }
+alignable { input: "th" output: "h" }
+alignable { input: "th" output: "hj" }
+alignable { input: "a" output: "a" }
+alignable { input: "a" output: "ə" }
+alignable { input: "a" output: "ɤ" }
+alignable { input: "a" output: "au" }
+alignable { input: "a" output: "aː" }
+alignable { input: "adh" output: "ɤ ɣ" }
+alignable { input: "agh" output: "ɤ ɣ" }
+alignable { input: "all" output: "au ɫ̪" }
+alignable { input: "ann" output: "au n̴̪" }
+alignable { input: "am" output: "au m" }
+alignable { input: "arr" output: "aː r̴" }
+alignable { input: "arn" output: "aː ɾ n" }
+alignable { input: "ard" output: "aː ɾ ʃ t̪" }
+alignable { input: "ail" output: "a l" }
+alignable { input: "ai" output: "ɪ" }
+alignable { input: "ai" output: "e" }
+alignable { input: "ai" output: "ə" }
+alignable { input: "ai" output: "ai" }
+alignable { input: "ai" output: "aː" }
+alignable { input: "ai" output: "a" }
+alignable { input: "aill" output: "ai ʎ" }
+alignable { input: "aibh" output: "ai v" }
+alignable { input: "aimh" output: "ai v" }
+alignable { input: "aird" output: "aː ɾ ʃ t̪" }
+alignable { input: "à" output: "aː" }
+alignable { input: "ài" output: "aː" }
+alignable { input: "ài" output: "ɛː" }
+alignable { input: "ao" output: "ɯː" }
+alignable { input: "aoi" output: "ɯi" }
+alignable { input: "aoi" output: "ɯː" }
+alignable { input: "aoimh" output: "ɯi v" }
+alignable { input: "aoibh" output: "ɯi v" }
+alignable { input: "e" output: "ə" }
+alignable { input: "e" output: "e" }
+alignable { input: "ea" output: "a" }
+alignable { input: "ea" output: "ə" }
+alignable { input: "ea" output: "ɤ" }
+alignable { input: "ea" output: "au" }
+alignable { input: "ea" output: "aː" }
+alignable { input: "ea" output: "j a" }
+alignable { input: "ea" output: "a" }
+alignable { input: "ea" output: "ɛ" }
+alignable { input: "eag" output: "a k" }
+alignable { input: "eadh" output: "ɤ ɣ" }
+alignable { input: "eagh" output: "ɤ ɣ" }
+alignable { input: "eall" output: "au n̴̪" }
+alignable { input: "ead" output: "e t̪" }
+alignable { input: "eag" output: "e k" }
+alignable { input: "earr" output: "aː r̴" }
+alignable { input: "earn" output: "aː ɾ n" }
+alignable { input: "èa" output: "ia" }
+alignable { input: "ei" output: "ɪ" }
+alignable { input: "ei" output: "ei" }
+alignable { input: "ei" output: "e" }
+alignable { input: "eim" output: "ei m" }
+alignable { input: "einn" output: "ei ɲ" }
+alignable { input: "eill" output: "ei ʎ" }
+alignable { input: "è" output: "ɛː" }
+alignable { input: "è" output: "eː" }
+alignable { input: "èi" output: "ɛː" }
+alignable { input: "èi" output: "eː" }
+alignable { input: "eo" output: "ɔ" }
+alignable { input: "eò" output: "j ɔː" }
+alignable { input: "eòi" output: "j ɔː" }
+alignable { input: "eò" output: "ɔː" }
+alignable { input: "eòi" output: "ɔː" }
+alignable { input: "eu" output: "eː" }
+alignable { input: "eu" output: "ia" }
+alignable { input: "eum" output: "eː m" }
+alignable { input: "i" output: "ɪ" }
+alignable { input: "i" output: "iː" }
+alignable { input: "i" output: "i" }
+alignable { input: "ì" output: "iː" }
+alignable { input: "ia" output: "iə" }
+alignable { input: "ia" output: "ia" }
+alignable { input: "io" output: "j u" }
+alignable { input: "io" output: "uː" }
+alignable { input: "io" output: "u" }
+alignable { input: "io" output: "i" }
+alignable { input: "ioll" output: "j uː ɫ̪" }
+alignable { input: "ionn" output: "j uː n̴̪" }
+alignable { input: "ìo" output: "iə" }
+alignable { input: "iu" output: "ju" }
+alignable { input: "iu" output: "uː" }
+alignable { input: "iu" output: "u" }
+alignable { input: "iurr" output: "uː r̴" }
+alignable { input: "iurs" output: "uː ɾ s̪" }
+alignable { input: "iù" output: "uː" }
+alignable { input: "iùi" output: "uː" }
+alignable { input: "o" output: "o" }
+alignable { input: "o" output: "ɔu" }
+alignable { input: "o" output: "ɔː" }
+alignable { input: "o" output: "ɔ" }
+alignable { input: "oi" output: "o" }
+alignable { input: "oi" output: "əi" }
+alignable { input: "oi" output: "ɤ" }
+alignable { input: "oi" output: "ɔ" }
+alignable { input: "oill" output: "əi ʎ" }
+alignable { input: "oinn" output: "əi ɲ" }
+alignable { input: "ò" output: "oː" }
+alignable { input: "ò" output: "ɔː" }
+alignable { input: "òi" output: "oː" }
+alignable { input: "òi" output: "ɔː" }
+alignable { input: "u" output: "uː" }
+alignable { input: "u" output: "u" }
+alignable { input: "ua" output: "ua" }
+alignable { input: "ua" output: "uə" }
+alignable { input: "uai" output: "ua" }
+alignable { input: "uai" output: "uə" }
+alignable { input: "ui" output: "ɯ" }
+alignable { input: "ui" output: "ɯi" }
+alignable { input: "ui" output: "u" }
+alignable { input: "uill" output: "ɯ ʎ" }
+alignable { input: "uinn" output: "ɯ ɲ" }
+alignable { input: "uill" output: "ɯi ʎ" }
+alignable { input: "uinn" output: "ɯi ɲ" }
+alignable { input: "uim" output: "ɯi m" }
+alignable { input: "uim" output: "ɯ m" }
+alignable { input: "ù" output: "uː" }
+alignable { input: "ùi" output: "uː" }
+alignable { input: "abh" output: "au" }
+alignable { input: "amh" output: "au" }
+alignable { input: "adh" output: "ɤː" }
+alignable { input: "agh" output: "ɤː" }
+alignable { input: "aidh" output: "ai" }
+alignable { input: "aigh" output: "ɤi" }
+alignable { input: "eagh" output: "ɔː" }
+alignable { input: "eamh" output: "ɛu" }
+alignable { input: "iodh" output: "iə" }
+alignable { input: "iogh" output: "iə" }
+alignable { input: "ogh" output: "oː" }
+alignable { input: "oibh" output: "ɤi" }
+alignable { input: "oigh" output: "ɤi" }
+alignable { input: "oimh" output: "ɔi" }
+alignable { input: "uimh" output: "ui" }
+alignable { input: "á" output: "aː" }
+alignable { input: "é" output: "eː" }
+alignable { input: "éi" output: "eː" }
+alignable { input: "ó" output: "oː" }
+alignable { input: "ói" output: "oː" }
+
