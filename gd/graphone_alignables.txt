@@ -157,6 +157,7 @@ alignable { input: "p" output: "pʰ" }
 alignable { input: "p" output: "ʰp" }
 alignable { input: "p" output: "p" }
 alignable { input: "p" output: "pj" }
+alignable { input: "p" output: "pʰ j" }
 alignable { input: "ph" output: "f" }
 alignable { input: "ph" output: "fj" }
 alignable { input: "r" output: "ᵲ" }
@@ -321,4 +322,8 @@ alignable { input: "é" output: "eː" }
 alignable { input: "éi" output: "eː" }
 alignable { input: "ó" output: "oː" }
 alignable { input: "ói" output: "oː" }
-
+alignable { input: "oirbh" output: "ɤ ɾʲ ɤ v" }
+alignable { input: "arbh" output: "a ɾ a v" }
+alignable { input: "iomr" output: "i m i ɾ" }
+alignable { input: "alb" output: "a ɫ̪ a p" }
+alignable { input: "arm" output: "a ɾ a m" }
